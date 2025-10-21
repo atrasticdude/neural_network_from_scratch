@@ -1,11 +1,6 @@
 import numpy as np
 import pandas as pd
 
-file_path = "C:/Users/artdude/Documents/conda_spyder/mnist/mnist_test.csv"
-df = pd.read_csv(file_path, header=None)
-Y = df.iloc[1:, 0].values
-X = df.iloc[1:, 1:].values.astype("float32") / 255.0
-
 
 def sigmoid(z): return 1 / (1 + np.exp(-z))
 def relu(z): return np.maximum(0, z)
